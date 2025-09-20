@@ -29,7 +29,7 @@ const ChatPage = ()=>{
 
    const sendMessageHandler = async () =>{
     try {
-        const res= await axios.post(`http://localhost:8000/api/v1/messages/send/${selectedUser._id}`, {message:textMessage},
+        const res= await axios.post(`https://instaclone-e11n.onrender.com/api/v1/messages/send/${selectedUser._id}`, {message:textMessage},
             {withCredentials:true}
     
         );

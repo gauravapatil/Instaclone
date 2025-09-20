@@ -15,7 +15,7 @@ const useGetAllMessages = () =>{
     useEffect(()=>{
         const fetchAllMessages = async () => {
             try{
-                const res = await axios.get(`http://localhost:8000/api/v1/messages/all/${selectedUser?._id}`, {withCredentials:true})
+                const res = await axios.get(`https://instaclone-e11n.onrender.com/api/v1/messages/all/${selectedUser?._id}`, {withCredentials:true})
                 // console.log("From sugg:",res.data)
                 if(res.data.success){
                     dispatch(setMessages(res.data.messages))

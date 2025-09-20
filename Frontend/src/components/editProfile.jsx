@@ -61,7 +61,7 @@ const EditProfile = ()=>{
 
 try {
     setLoading(true)
-    const res= await axios.post("http://localhost:8000/api/v1/users/profile/edit",formData, {withCredentials:true})
+    const res= await axios.post("https://instaclone-e11n.onrender.com/api/v1/users/profile/edit",formData, {withCredentials:true})
     if(res.data.success){
         console.log(res.data);
         const updatedUserData = {

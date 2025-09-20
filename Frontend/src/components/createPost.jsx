@@ -47,7 +47,7 @@ const CreatePost = ({open,setOpen})=>{
         try {
             console.log(user)
             setLoading(true)
-            const res= await axios.post("http://localhost:8000/api/v1/posts/addPost", formData,
+            const res= await axios.post("https://instaclone-e11n.onrender.com/api/v1/posts/addPost", formData,
                {
                 withCredentials : true
          } );
