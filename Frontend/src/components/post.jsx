@@ -71,7 +71,7 @@ try {
     const likeORDislikeHandler = async() => {
       try {
         const action = liked ? 'dislike' : 'like'
-          const res= await axios.get(`http://localhost:8000/api/v1/posts/${post?._id}/${action}`,{withCredentials:true})
+          const res= await axios.get(`https://instaclone-e11n.onrender.com/api/v1/posts/${post?._id}/${action}`,{withCredentials:true})
           // console.log(res)
           if(res.data.success){
             
