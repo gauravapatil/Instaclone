@@ -29,7 +29,7 @@ export const addNewPost= async(req,res)=>{
          if(user){
             user.posts.push(post._id);
             await user.save()
-            console.log(user)
+            // console.log(user)
          }
          
          await post.populate({path:'author',select:'-password'})

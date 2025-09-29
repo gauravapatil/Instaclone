@@ -58,7 +58,7 @@ const ChatPage = ()=>{
                     {
                         suggestedUsers.map((suggestedUser)=>{
                             const isOnline = onlineUsers.includes(suggestedUser?._id);
-                            console.log("isOnline", isOnline, suggestedUser.username)
+                            // console.log("isOnline", isOnline, suggestedUser.username)
                             return (
                                 <div className="flex gap-3 items-center p-3 hover:bg-gray-50 cursor-pointer ml-2 " onClick={()=>dispatch(setSelectedUser(suggestedUser))}>
                                     <Avatar className="h-7 w-7">

@@ -139,7 +139,7 @@ export const editProfile= async(req,res)=>{
         if(gender) user.gender=gender;
         if(profilePicture) user.profilePicture=cloudResponse.secure_url;
         await user.save();
-        console.log(profilePicture)
+        // console.log(profilePicture)
 
         res.status(200).json({
             message:"Profile edited successfully",

@@ -34,7 +34,7 @@ const Post = ({post}) => {
 
     const savedPostHandler = async()=>{
       try{
-        const res= await axios.get(`http://localhost:8000/api/v1/posts/${post._id}/bookmark`,{withCredentials:true});
+        const res= await axios.get(`https://instaclone-e11n.onrender.com/api/v1/posts/${post._id}/bookmark`,{withCredentials:true});
         if(res.data.success){
           // console.log(res.data)
           toast.success(res.data.message);
@@ -47,7 +47,7 @@ const Post = ({post}) => {
 
     const commentHandler = async()=>{
 try {
-  const res= await axios.post(`http://localhost:8000/api/v1/posts/${post._id}/comment`, {text},{withCredentials:true})
+  const res= await axios.post(`https://instaclone-e11n.onrender.com/api/v1/posts/${post._id}/comment`, {text},{withCredentials:true})
 
       if(res.data.success){
         // console.log(res.data)
@@ -92,6 +92,7 @@ try {
           }
 
       } catch (error) {
+
           console.log(error)
       }
   }

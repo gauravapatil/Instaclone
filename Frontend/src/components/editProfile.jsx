@@ -43,17 +43,17 @@ const EditProfile = ()=>{
 
     const dataHandler = async() => {
 
-          
-        console.log("input",input);
+        
+        // console.log("input",input);
         const formData = new FormData();
         formData.append("bio",input.bio);
         formData.append("gender",input.gender)
         if(input.profilePic){
             formData.append("profilePic",input.profilePic)
         }
-        for(let[key,value] of formData.entries()){
-            console.log(key,value)
-        }
+        // for(let[key,value] of formData.entries()){
+        //     console.log(key,value)
+        // }
        
         
 
@@ -63,7 +63,7 @@ try {
     setLoading(true)
     const res= await axios.post("https://instaclone-e11n.onrender.com/api/v1/users/profile/edit",formData, {withCredentials:true})
     if(res.data.success){
-        console.log(res.data);
+        // console.log(res.data);
         const updatedUserData = {
             ...user,
             bio:res.data.user?.bio,
@@ -80,7 +80,7 @@ try {
     console.log(error)
 }
 finally{
-    console.log("Input",input)
+    // console.log("Input",input)
     setLoading(false)
 }
     }
