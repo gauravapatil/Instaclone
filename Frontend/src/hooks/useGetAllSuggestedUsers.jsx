@@ -15,7 +15,7 @@ const useGetAllSuggestedUsers = () =>{
         const fetchAllSuggestedUsers = async () => {
             try{
                 const res = await axios.get("https://instaclone-e11n.onrender.com/api/v1/users/suggested", {withCredentials:true})
-                console.log("From sugg:",res.data)
+                // console.log("From sugg:",res.data)
                 if(res.data.success){
                     // console.log(res)
                     dispatch(setSuggestedUsers(res.data.users))
